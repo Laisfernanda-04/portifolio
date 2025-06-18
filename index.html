@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - Laís Fernanda</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="container-fluid">
+    <ul>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+<main class="container">
+  <header class="perfil-header"> <!-- Novo container para cabeçalho -->
+    <h1 class="nome-perfil">Laís Fernanda</h1> <!-- Melhor usar h1 para nome -->
+    <img src="https://i.imgur.com/Nbihisw.jpeg" alt="Foto de perfil de Laís Fernanda" class="imagem-perfil">
+    <p>Com um sonho imenso de se formar em jornalismo e atuar na área. Me dedicando sempre nos estudos, garantindo certificados e desenvolvendo projetos extracurriculares.</p>
+  </header>
+
+    <section id="habilidades">
+      <h2>Minhas Habilidades</h2>
+      <div class="grid">
+        <div class="habilidade">Comunicativa</div>
+        <div class="habilidade">Dedicada</div>
+        <div class="habilidade">Autonomia</div>
+        <div class="habilidade">Criatividade</div>
+        <div class="habilidade">Confiabilidade</div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>Meus Projetos Desenvolvidos</h2>
+      <div class="grid">
+        <div class="projeto">
+          <img src="https://i.imgur.com/UOqMsJF.png" alt="Projeto Dancing Ball">
+          <h3>Projeto 1 - Dancing Ball</h3>
+          <p>Um dos primeiros projetos desenvolvidos por mim.</p>
+          <a href="https://laisfernanda-04.github.io/DancingBall/index.html" class="btn-primary" target="_blank">Ver Projeto</a>
+        </div>
+
+        <div class="projeto">
+          <img src="https://i.imgur.com/ikRMnhu.png" alt="Projeto Corrida de Emojis">
+          <h3>Projeto 2 - Corrida de Emojis</h3>
+          <p>Jogo divertido com emojis! Um desafio animado.</p>
+          <a href="https://laisfernanda-04.github.io/Corrida-de-Emojis/" class="btn-primary" target="_blank">Ver Projeto</a>
+        </div>
+
+        <div class="projeto">
+          <img src="https://i.imgur.com/Ju93CjH.jpeg" alt="Projeto Quente ou Frio">
+          <h3>Projeto 3 - Quente ou Frio?</h3>
+          <p>Jogo de adivinhação com feedback quente/frio.</p>
+          <a href="https://laisfernanda-04.github.io/Spotless-robin/" class="btn-primary" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificados">
+      <h2>Certificados e Conquistas</h2>
+      <div class="grid">
+        <div class="projeto">
+          <img src="https://i.imgur.com/F5VJyfJ.png" alt="Certificado ONHB">
+          <h3>ONHB - História</h3>
+          <p>Chegada à 3ª fase da ONHB, com muito aprendizado.</p>
+          <a href="https://prova.olimpiadadehistoria.com.br/certificado/o178251593052db7ff16d1000" class="btn-primary" target="_blank">Ver Certificado</a>
+        </div>
+
+        <div class="projeto">
+          <img src="https://i.imgur.com/0hwkEhP.png" alt="Projeto Maré Negra">
+          <h3>Maré Negra</h3>
+          <p>Site escolar anti-racista com materiais educativos.</p>
+          <a href="https://marenegra.my.canva.site/" class="btn-primary" target="_blank">Ver Site</a>
+        </div>
+
+        <div class="projeto">
+          <img src="https://i.imgur.com/1PIT6NZ.png" alt="Curso Administrativo">
+          <h3>Curso Administrativo</h3>
+          <p>Curso de Administração 2024 com aplicação prática.</p>
+          <a href="https://www.escritoriologica.cnt.br/logica-do-bem" class="btn-primary" target="_blank">Ver Acessória Contábil</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>📧 Email: buenolais@gmail.com</p>
+      <p>📱 Instagram: @allves_lali</p>
+    </section>
+  </main>
+
+
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage" src="" alt="Imagem do projeto" class="modal-image">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <a id="modalLink" href="#" class="btn-primary" target="_blank">Ver Projeto</a>
+  </div>
+</div>
+
+
+
+
+
+<script>
+  // Obtém o modal
+  const modal = document.getElementById("projectModal");
+  
+  // Obtém o botão que fecha o modal
+  const span = document.getElementsByClassName("close")[0];
+  
+  // Quando o usuário clica no (x), fecha o modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // Quando o usuário clica em qualquer lugar fora do modal, fecha ele
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  
+  // Função para abrir o modal com os dados do projeto
+  function openModal(imgSrc, title, description, projectLink) {
+    document.getElementById("modalImage").src = imgSrc;
+    document.getElementById("modalImage").alt = title;
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalDescription").textContent = description;
+    document.getElementById("modalLink").href = projectLink;
+    modal.style.display = "block";
+  }
+  
+  // Adiciona eventos de clique a todos os projetos
+  document.addEventListener('DOMContentLoaded', function() {
+    const projects = document.querySelectorAll('.projeto');
+    
+    projects.forEach(project => {
+      project.addEventListener('click', function() {
+        const imgSrc = this.querySelector('img').src;
+        const title = this.querySelector('h3').textContent;
+        const description = this.querySelector('p').textContent;
+        const projectLink = this.querySelector('a').href;
+        
+        openModal(imgSrc, title, description, projectLink);
+      });
+    });
+  });
+</script>
+
+
+</body>
+
+</html>
