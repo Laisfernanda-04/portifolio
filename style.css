@@ -1,0 +1,245 @@
+@import url('https://fonts.cdnfonts.com/css/glinka-personal-use-only');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  background-color: #fec1df;
+  color: #000000;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0; /* Alterado de margin-top: 10px para margin: 0 */
+  padding: 0; /* Adicionado para garantir que não haja padding indesejado */
+  background-image: url('https://i.imgur.com/ciRRpWo.jpeg');
+  background-size: cover; /* cobre toda a área */
+  background-position: center; /* centraliza a imagem */
+  background-repeat: repeat; /* repetição */
+  background-attachment: fixed; /* fundo fixo ao rolar */
+}
+
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding-top: 0; /* Garante que não há padding no topo do container */
+}
+
+nav a {
+  background-color: #cc0066;
+  color: white !important;
+  border-radius: 30px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #a30052;
+}
+
+
+.habilidade {
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 30px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.habilidade:hover{
+    background-color: #cc0066;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.projeto {
+  background: #fd9ea4;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s;
+  color: #000;
+}
+
+.projeto:hover {
+  transform: translateY(-10px);
+}
+
+.projeto img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background-color: #cc0066;
+  border-radius: 20px;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #a30052;
+}
+
+#contato p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Barra de navegação principal */
+nav.container-fluid {
+  padding: 0.5rem 0; /* Espaçamento vertical reduzido */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center;
+}
+
+/* Lista de links */
+nav ul {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 0.75rem; /* Espaço entre os itens */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ocupa toda a largura */
+  flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+/* Itens individuais */
+nav ul li {
+  list-style: none;
+  margin: 0;
+}
+
+/* Links */
+nav ul li a {
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem !important;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Título "Laís Fernanda" */
+.nav-titulo {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  width: 100%;
+}
+
+
+/* Aumenta a imagem de perfil */
+.imagem-perfil {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #a30052;
+  display: block;
+margin: 0 auto 1rem auto; /* Remove totalmente a margem superior */
+  /* O valor segue a ordem: top right bottom left */
+  margin-top: 0; /* Remove margem superior extra */
+}
+
+/* Container do cabeçalho */
+.perfil-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.perfil-header p{
+    color: #000;
+    font-size: 1.3em;
+}
+
+/* Estilo para o nome */
+.nome-perfil {
+font-family: 'Glinka Personal Use Only', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #cc0066; /* Cor para combinar com seu tema */
+  width: 100%;
+}
+
+
+
+h2{
+  color: #cc0066;
+  font-family: 'Glinka Personal Use Only', sans-serif;
+
+}
+
+
+
+
+
+
+
+
+/* Estilos do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #fd9ea4;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 700px;
+  position: relative;
+  color: #000;
+}
+
+.close {
+  color: #cc0066;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #a30052;
+}
+
+.modal-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#modalTitle {
+  color: #cc0066;
+  font-family: 'Glinka Personal Use Only', sans-serif;
+  margin-bottom: 1rem;
+}
+
+#modalDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
